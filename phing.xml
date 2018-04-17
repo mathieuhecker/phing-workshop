@@ -22,6 +22,7 @@
     </target>
 
     <target name="setup-config" description="Browse all files with pattern *.php">
+        <!-- mkdir function to create local directiry -->
         <!-- foreach function -->
             <!-- fileset function -->
                 <!-- include function -->
