@@ -1,0 +1,25 @@
+{
+  "name": "phing-workshop",
+  "description": "Phing workshop",
+  "type": "service",
+  "keywords": [
+    "phing"
+  ],
+  "require": {
+      "phing/phing": "2.*",
+    "twbs/bootstrap": "^4.1"
+  },
+  "authors": [
+    {
+      "name": "Mathieu Hecker",
+      "email": "m.hecker@flash-global.net",
+      "role": "lead"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.flash-global.net"
+    }
+  ]
+}

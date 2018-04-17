@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<project name="myProjectPhing" basedir="." default="help">
+
+    <!-- DOCUMENTATION : https://www.phing.info/phing/guide/en/output/chunkhtml -->
+    <!-- IMPORT PROPERTY FILE -->
+    <property file="settings.ini"/>
+
+    <!-- LIST AVAILABLE TARGETS -->
+    <target name="help" description="List available targets">
+        <exec executable="vendor/bin/phing"
+              passthru="true">
+            <arg value="-l"/>
+        </exec>
+    </target>
+
+    <target name="sub-setup-config" description="Replace token property by its value">
+        <!-- loadfile function -->
+            <!-- filterChain function -->
+                <!-- replaceregexp function -->
+                    <!-- regexp function with pattern "@(.[^@]*)@" -->
+        <!-- echo function to write updated file into new file -->
+    </target>
+
+    <target name="setup-config" description="Browse all files with pattern *.php">
+        <!-- foreach function -->
+            <!-- fileset function -->
+                <!-- include function -->
+    </target>
+
+</project>
