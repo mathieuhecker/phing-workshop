@@ -14,17 +14,23 @@
     </target>
 
     <target name="sub-setup-config" description="Replace token property by its value">
-        <!-- loadfile function -->
-            <!-- filterChain function -->
-                <!-- replaceregexp function -->
-                    <!-- regexp function with pattern "@(.[^@]*)@" -->
-        <!-- echo function to write updated file into new file -->
+        <loadfile property="file.config" file="${absfilename}">
+            <filterchain>
+                <replaceregexp>
+                    <regexp pattern="@(.[^@]*)@" replace="${\1}"/>
+                </replaceregexp>
+            </filterchain>
+        </loadfile>
+        <echo message="${file.config}" file="config/local/${filename}"/>
     </target>
 
     <target name="setup-config" description="Browse all files with pattern *.php">
-        <!-- foreach function -->
-            <!-- fileset function -->
-                <!-- include function -->
+        <mkdir dir="config/local" />
+        <foreach param="filename" absparam="absfilename" target="sub-setup-config">
+            <fileset dir="config">
+                <include name="*.php" />
+            </fileset>
+        </foreach>
     </target>
 
 </project>

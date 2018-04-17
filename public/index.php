@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . '/../config/app.php';
+include_once __DIR__ . '/../config/local/app.php';
 ?>
 <!doctype html>
 <html lang="fr">
