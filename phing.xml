@@ -19,6 +19,13 @@
                 <!-- replaceregexp function -->
                     <!-- regexp function with pattern "@(.[^@]*)@" -->
         <!-- echo function to write updated file into new file -->
+        <!-- OR -->
+        <!-- reflexive function -->
+            <!-- fileset function -->
+                <!-- include function -->
+            <!-- filterchain function -->
+                <!-- replaceregexp -->
+                    <!-- regexp function -->
     </target>
 
     <target name="setup-config" description="Browse all files with pattern *.php">
